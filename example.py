@@ -1,4 +1,5 @@
-from src.async_throttler import async_throttler
+from src.async_throttler import RequestWrapper , AsyncThrottler 
+import asyncio
 
 def response_callback(data):
     print(f"Callback received data: {data[:50]}...")
@@ -13,6 +14,12 @@ async def main():
     urls = [
         "https://httpbin.org/get", 
         "https://httpbin.org/delay/1", 
+        "https://httpbin.org/delay/1", 
+        "https://httpbin.org/delay/1", 
+        "https://httpbin.org/delay/1", 
+        "https://httpbin.org/delay/1", 
+        "https://httpbin.org/delay/1", 
+        "https://htsdftpbin.org/delay/1", 
         "https://httpbin.org/uuid", 
         "https://httpbin.org/ip", 
         "https://httpbin.org/headers"
